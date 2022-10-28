@@ -1,9 +1,6 @@
 <?php
-$host       = "<endpoint>";
-  $username   = "<username>";
-  $password   = "<password>";
-  $dsn        = "mysql:host=$host;dbname=tasks";
-  $options    = array(
-                  PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-                );
+$connect = mysqli_connect("localhost", "root", "<password>", "db_lamp-crud-aws");
+if (!$connect) {
+	die("Connection failed: " . mysqli_connect_error());
+}
 ?>
